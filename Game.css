@@ -1,0 +1,123 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #30502c; /* Dark grey background */
+  color: #eff1ec; /* Light text color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37); /* Stronger shadow for depth */
+  padding: 40px 60px;
+  backdrop-filter: blur(10px); /* Background blur effect */
+  border: 1px solid rgba(255, 255, 255, 0.18); /* Light border */
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-board {
+  margin-right: 40px;
+}
+
+.game-info {
+  margin-left: 40px;
+}
+
+.square {
+  background: #34495e; /* Darker grey for squares */
+  border: 2px solid #ecf0f1; /* Light border */
+  border-radius: 8px;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 50px;
+  height: 50px;
+  margin-right: 8px;
+  margin-top: 8px;
+  padding: 0;
+  text-align: center;
+  width: 50px;
+  transition: background 0.3s ease, transform 0.3s ease;
+  color: #ecf0f1; /* Light text color */
+}
+
+.square:hover {
+  background: #3d566e; /* Slightly lighter on hover */
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+button {
+  background-color: #1abc9c; /* Teal button */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #16a085; /* Darker teal on hover */
+  transform: scale(1.05);
+}
+
+button:focus {
+  outline: none;
+}
+
+.game-info button {
+  background-color: #e74c3c; /* Red button for game info */
+}
+
+.game-info button:hover {
+  background-color: #c0392b; /* Darker red on hover */
+  transform: scale(1.05);
+}
+
+.status {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ecf0f1; /* Light text color */
+}
+
+ol {
+  padding-left: 20px;
+  color: #ecf0f1; /* Light text color */
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+li button {
+  background-color: #3498db; /* Blue button for history moves */
+}
+
+li button:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+}
